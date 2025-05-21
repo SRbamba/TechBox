@@ -9,22 +9,75 @@ body {
 header {
     background-color: #1a73e8;
     color: white;
-    padding: 4vh 0;
+    padding: 4vh 5vw;
     text-align: center;
-    position: relative;
+    display: flex; /* Usamos flexbox para centrar verticalmente */
+    flex-direction: column; /* Apilamos los elementos verticalmente */
+    align-items: center; /* Centramos horizontalmente */
 }
 
-header img {
+.dropdown-menu {
     position: absolute;
-    top: 1vh;
-    left: 1vw;
-    width: 8vw;
-    height: 16vh;
+    top: 2vh;
+    left: 2vw;
+    z-index: 10;
+  }
+ 
+  .menu-toggle {
+    background-color: #1a73e8;
+    color: white;
+    padding: 1vh 2vw;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5vh;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+ 
+  .menu-toggle:hover {
+    background-color: #155ab6;
+  }
+ 
+  .dropdown-content {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffffee;
+    border-radius: 0.5vh;
+    box-shadow: 0 0.5vh 1.5vh rgba(0, 0, 0, 0.1);
+    margin-top: 1vh;
+    overflow: hidden;
+    backdrop-filter: blur(6px);
+  }
+ 
+  .dropdown-content a {
+    color: #1a1a1a;
+    padding: 1vh 2vw;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 500;
+    transition: background 0.2s ease;
+  }
+ 
+  .dropdown-content a:hover {
+    background-color: #f0f4f8;
+  }
+ 
+  .menu-toggle:focus + .dropdown-content,
+  .dropdown-content:hover {
+    display: flex;
+  }
+
+header img {
+    width: 15vw; /* Ajusta el ancho del logo */
+    height: auto;
+    margin-bottom: 1vh; /* Espacio entre el logo y el título */
 }
 
 header h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 4vh;
+    margin-top: 0; /* Aseguramos que no haya margen superior extra */
 }
 
 .container {
