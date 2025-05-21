@@ -6,6 +6,19 @@ Este documento describe los servicios de instalación, mantenimiento y reparaci�
 
 En TechBox, entendemos que una red informática eficiente y confiable es fundamental para el éxito de cualquier empresa. Por eso, ofrecemos un conjunto completo de servicios diseñados para optimizar su infraestructura digital y garantizar su funcionamiento sin problemas.
 
+Servicio de CCTV
+Seguridad Visual Inteligente para su Empresa
+En TechBox ofrecemos soluciones de videovigilancia mediante sistemas de CCTV diseñados para reforzar la seguridad física de su organización.
+
+Instalación a Medida
+Diseñamos e instalamos sistemas de cámaras estratégicamente ubicadas, con tecnología HD, visión nocturna y detección de movimiento.
+
+Monitoreo Remoto
+Acceda en tiempo real a sus cámaras desde cualquier dispositivo, mejorando el control y la capacidad de respuesta ante incidentes.
+
+Gestión y Almacenamiento de Grabaciones
+Ofrecemos almacenamiento seguro, tanto local como en la nube, con acceso fácil a registros visuales cuando lo necesite.
+
 ### Instalación de Redes a Medida
 
 * **Diseño e Implementación:** Creamos redes personalizadas que se adaptan a sus necesidades específicas, desde redes de área local (LAN) hasta redes de área amplia (WAN) y redes inalámbricas (WiFi).
