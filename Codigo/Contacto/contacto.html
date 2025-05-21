@@ -7,6 +7,23 @@
   <link rel="stylesheet" href="contacto.css">
 </head>
 <body>
+
+  <header>
+    <nav class="dropdown-menu">
+      <button class="menu-toggle">☰ Menu</button>
+      <div class="dropdown-content">
+        <a href="/Principal/index.html">Contacto</a>
+        <a href="/Nosotros/Nosotros.html">Nosotros</a>
+        <a href="/Mvv/MVV.html">Misión, visión y valor</a>
+        <a href="/Politicas/Politicas.html">Políticas</a>
+      </div>
+    </nav>
+
+    <a href="#" class="logo-link">
+      <img src="/Archivos/Logo-TechoBox.png" alt="Logo de TechBox" class="logo-fixed" />
+    </a>
+  </header>
+
   <main class="contacto-container">
     <h1>Contacto</h1>
     <form class="formulario-contacto">
@@ -24,6 +41,16 @@
 
       <button type="submit">Enviar mensaje</button>
     </form>
+
+    <p id="mensaje-envio" style="display:none; color:green;">¡Tu mensaje ha sido enviado con éxito!</p>
+    <script>
+      document.querySelector('.formulario-contacto').addEventListener('submit', function(e) {
+        e.preventDefault(); 
+        document.getElementById('mensaje-envio').style.display = 'block';
+      });
+    </script>
+    
+
   </main>
 </body>
 </html>
