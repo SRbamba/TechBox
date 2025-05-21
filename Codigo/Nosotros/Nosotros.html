@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nosotros</title>
+    <link rel="stylesheet" href="Nosotros.css" />
+</head>
+
+<body>
+
+  <header>
+    <nav class="dropdown-menu">
+        <button class="menu-toggle">☰ Menu</button>
+        <div class="dropdown-content">
+            <a href="/Contacto/contacto.html">Contacto</a>
+            <a href="/Principal/index.html">Principal</a>
+            <a href="/Mvv/MVV.html">Misión, visión y valor</a>
+            <a href="/Politicas/Politicas.html">Políticas</a>
+        </div>
+    </nav>
+
+    <div class="header-content">
+        <img src="/Archivos/Logo-TechoBox.png" alt="Logo de TechBox" class="logo-nosotros">
+        <div class="section-title">Nosotros</div>
+    </div>
+  </header>
+
+
+    <div class="carrusel-wrapper">
+        <button class="flecha izquierda" onclick="moverCarrusel(-1)">❮</button>
+
+        <div class="equipo-container" id="carrusel">
+            <div class="miembro">
+                <img src="/Archivos/Fotos-personales/foto-lucas.jpg" alt="Lucas Ibañez" />
+                <h4>Lucas Ibañez</h4>
+                <p>Director Ejecutivo y Técnico de hardware</p>
+            </div>
+            <div class="miembro">
+                <img src="/Archivos/Fotos-personales/foto-priscila.jpg" alt="Priscila Matta" />
+                <h4>Priscila Matta</h4>
+                <p>Administración y ventas</p>
+            </div>
+            <div class="miembro">
+                <img src="/Archivos/Fotos-personales/foto-genua.jpg" alt="Valentino Genua" />
+                <h4>Valentin Genua</h4>
+                <p>Técnico operativo y gestor de redes</p>
+            </div>
+            <div class="miembro">
+                <img src="/Archivos/Fotos-personales/foto-benjamin.jpg" alt="Benjamin Fernandez" />
+                <h4>Benjamin Fernandez</h4>
+                <p>Infraestructura y TI</p>
+            </div>
+            <div class="miembro">
+                <img src="/Archivos/Fotos-personales/foto-alexis.jpg" alt="Alexis Caballero" />
+                <h4>Alexis Caballero</h4>
+                <p>Vicedirector y Técnico CCTV</p>
+            </div>
+        </div>
+
+        <button class="flecha derecha" onclick="moverCarrusel(1)">❯</button>
+    </div>
+
+    <script>
+        const carrusel = document.getElementById("carrusel");
+        let tarjetasOriginales = Array.from(carrusel.children);
+        let tarjetaAncho = tarjetasOriginales[0].offsetWidth + 32;
+        let isTransitioning = false; // Bandera para evitar interrupciones
+
+        // Posicionar al inicio
+        carrusel.scrollLeft = 0;
+
+        function moverCarrusel(direccion) {
+            if (isTransitioning) return;
+            isTransitioning = true;
+
+            carrusel.scrollBy({ left: tarjetaAncho * direccion, behavior: "smooth" });
+
+            setTimeout(() => {
+                const scrollPos = carrusel.scrollLeft;
+                const maxScroll = tarjetaAncho * (tarjetasOriginales.length - 1); // Posición de la última tarjeta
+
+                if (scrollPos <= 0) {
+                    carrusel.scrollLeft = maxScroll; // Ir a la última tarjeta
+                } else if (scrollPos >= maxScroll) {
+                    carrusel.scrollLeft = 0; // Ir a la primera tarjeta
+                }
+
+                isTransitioning = false;
+            }, 300); // Ajusta este tiempo para que coincida con la transición CSS
+        }
+    </script>
+
+</body>
+
+</html>
